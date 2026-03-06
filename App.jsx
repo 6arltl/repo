@@ -16,6 +16,8 @@ function App() {
           defaultValue={0}
           aria-label="Default"
           valueLabelDisplay="auto"
+          sdkskdoskofa
+          kdsod
         />
         <Button variant="contained">Text</Button>
         <a href="https://vite.dev" target="_blank">

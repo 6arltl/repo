@@ -1,0 +1,45 @@
+
+git config --global user.name "Gaspar" --------------------v
+git config --global user.email "Correo@gmail.com" -----> Sirve para configurar el nombre y correo
+git config --list --> Muestra la lista de configuraciones
+git config color.ui true --> Activa los colores en la terminal de Git
+
+git init --> Comienzas el git en el directorio en que estés
+
+
+git add texto.txt --> Agrega el archivo al staging area/index
+git status --> Te dice el status del working tree
+git status -s --> Una versión simple del status
+
+git commit -a -m "mensaje" --> -a = todo del staging area / -m = el mensaje del commit
+git checkout texto.txt --> Recupera del repositorio local un archivo
+git reset --hard 78871 --> Recupera por número de commit
+
+git diff --> Ver las diferencias del commit
+git log --oneline --> Muestra los commits y los cambios
+git log --oneline --all --> Muestra también de todas las ramas
+git ls-tree -r --name-only 76671 --> Muestra los nombres de esos archivos de ese commit específico (si se pone HEAD envés del número mostrará el último commit)
+
+git branch --> Enlista todas las ramas
+git branch nombre-de-rama --> Crea una nueva rama (los nombres de las ramas en kabeb-case)
+git switch -c nombre-de-rama --> Crea una nueva rama y te lleva a ella
+git branch -m nombre-de-rama nombre-nuevo-de-rama --> Modifica el nombre de una rama desde otra
+git branch -m nombre-nuevo-de-rama --> Modifica el nombre de la rama en donde se esté
+git merge otra-rama --> Fusiona los commits de otra rama a la rama en donde se esté
+
+.gitignore --> Ignora los archivos nombrados aquí, usa expresiones regulares
+*.txt --> Todos los archivos .txt
+!README.txt --> No ignora este archivo
+carpeta/ --> Todos los archivos de este directorio
+git config --global core.excludesfile C:/.gitignore_global --> Configura este archivo para un gitignore global
+
+git config --global alias.nombre-de-alias "ls-tree -r --name-only" --> Crea un atajo a un comando largo, si hay texto usa comillas simples ('')
+
+git clone https://github.com/ejemplo/repositorio-remoto.git --> Clona ese repositorio a esta computadora, cuando se clona un repositorio, se clona todo, incluyendo historial, commits, etc...
+origin --> Repositorio remoto
+git push origin main --> Sube al repositorio remoto de la rama "main", lo más cómodo es crear un Token temporal en Github
+git pull --> Actualiza los cambios del repositorio remoto al local
+
+Workspace || Staging Area / Index || Local Repository / Head || Remote Repository
+         -add->                -commit->
+         < ---------checkout----------
